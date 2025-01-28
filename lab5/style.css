@@ -1,0 +1,92 @@
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: inherit;
+}
+
+/* ---------- Задание 1 и 2 ----------- */
+body {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+main {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ---------- Задание 3 ----------- */
+@font-face {
+  font-family: "Exotica";
+  src: url("fonts/Exotica.ttf") format('truetype');
+}
+#section1 {
+  font-family: Exotica;
+}
+@font-face {
+  font-family: "Pixeloid";
+  src: url("fonts/Pixeloid.ttf") format('truetype');
+}
+#section2 {
+  font-family: Pixeloid;
+}
+@font-face {
+  font-family: "Zeitmax";
+  src: url("fonts/Zeitmax.ttf") format('truetype');
+}
+#section3 {
+  font-family: Zeitmax;
+}
+/* ---------- Задание 4 ----------- */
+.navigation-section ul {
+  list-style: none;
+}
+.navigation-section a {
+  text-decoration: none;
+  color: black;
+}
+/* ---------- Задание 5 ----------- */
+#section1 .description {
+  text-align: center;
+}
+#section2 .description {
+  text-align: end;
+}
+#section3 .description {
+  text-align: justify;
+}
+/* ---------- Задание 6 и 7----------- */
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+/* ---------- Задание 8 ----------- */
+ul {
+  font-weight: bold;
+}
+/* ---------- ДОПОЛНИТЕЛЬНОЕ ЗАДАНИЕ ----------- */
+
+@font-face {
+  font-family: "Angled";
+  src: url("fonts/angled.ttf") format('truetype');
+}
+.preview-section {
+  background-color: #f7edf5;
+  width: fit-content;
+  align-self: center;
+  border-radius: 40px;
+  padding: 20px;
+  margin-top: 40px;
+}
+.preview-section>h2 {
+  margin: 0;
+}
+.preview {
+  font-family: Angled;
+  font-size: 40px;
+}
