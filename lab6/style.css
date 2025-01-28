@@ -1,0 +1,162 @@
+html {
+    font-family: sans-serif;
+  }
+
+body {
+  margin: 0;
+}
+main {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  justify-content: space-between;
+}
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+button {
+  margin: 50px;
+  font-size: 20px;
+  background-color: rgb(254, 128, 128);
+}
+/* ------------ Задание 1 и 2 ------------- */
+.vibrating-button {
+  padding: 20px 40px;
+  font-size: 20px;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: vibrate 0.1s infinite;
+}
+.vibrating-button:hover {
+  animation: none;
+  background-color: green;
+}
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* ------------ Задание 3 ------------- */
+.link {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  transition: 0.4s ease-in-out;
+}
+.link:hover {
+  color: green;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: green;
+  transition: 0.4s ease-in-out;
+}
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* ------------ Задание 4 ------------- */
+.border {
+  height: 200px;
+  border-radius: 25px;
+  background-color: black;
+  width: fit-content;
+}
+#ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(250, 89, 207);
+  animation: shrink 4s;
+}
+#ball-container {
+  width: 50px;
+  height: 50px;
+  animation: bounce 4s;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  15% {
+      transform: scaleY(1);
+      animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  20% {
+    transform: scaleY(0.2);
+    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+  }
+  25% {
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  55% {
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  60% {
+    transform: scaleY(0.4);
+    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+  }
+  65% {
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  95% {
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  100% {
+    transform: scaleY(0.6);
+    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+  }
+}
+@keyframes bounce {
+  0% {
+      transform: translateY(160px);
+      animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  20% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+  }
+  40% {
+    transform: translateY(80px);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  60% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+  }
+  80% {
+    transform: translateY(40px);
+    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+  }
+}
