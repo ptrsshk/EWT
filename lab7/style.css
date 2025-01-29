@@ -1,0 +1,49 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(16, 233, 215, 0.178);
+  }
+  /* ---------- Задание ------------ */
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+  }
+  .container.super {
+    flex-direction: row-reverse;
+  }
+  .container.third {
+    flex-direction: column;
+    flex-grow: 2;
+  }
+  .container.second {
+    flex-direction: column-reverse;
+    flex-grow: 1;
+  }
+  .container.fifth, .container.fourth {
+    flex-grow: 1;
+  }
+
+
