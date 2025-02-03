@@ -46,4 +46,26 @@ html {
     flex-grow: 1;
   }
 
-
+  /* ---------- Доп Задание ------------ */
+  .all-container {
+    display: flex;
+  }
+  #controls-container {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+  }
+  .controller-btn {
+  }
+  .task-container {
+  }
+  .box {
+  }
+  .first {
+  }
+  .second {
+  }
+  .third {
+  }
+  .fourth {
+  }
