@@ -1,71 +1,85 @@
 html {
-    font-family: sans-serif;
-  }
+  font-family: sans-serif;
+}
 
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+}
 
-  header {
-    background: rgb(52, 206, 142);
-    height: 100px;
-  }
+header {
+  background: rgb(52, 206, 142);
+}
 
-  h1 {
-    text-align: center;
-    color: white;
-    line-height: 100px;
-    margin: 0;
-  }
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
 
-  article {
-    padding: 10px;
-    margin: 10px;
-    background: rgba(16, 233, 215, 0.178);
-  }
-  /* ---------- Задание ------------ */
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-  .container {
-    display: flex;
-  }
-  .container.super {
-    flex-direction: row-reverse;
-  }
-  .container.third {
-    flex-direction: column;
-    flex-grow: 2;
-  }
-  .container.second {
-    flex-direction: column-reverse;
-    flex-grow: 1;
-  }
-  .container.fifth, .container.fourth {
-    flex-grow: 1;
-  }
+article {
+  padding: 10px;
+  margin: 10px;
+  background: rgba(16, 233, 215, 0.178);
+}
+/* ---------- Задание ------------ */
+main {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+}
+.container.super {
+  flex-direction: row-reverse;
+}
+.container.third {
+  flex-direction: column;
+  flex-grow: 2;
+}
+.container.second {
+  flex-direction: column-reverse;
+  flex-grow: 1;
+}
+.container.fifth,
+.container.fourth {
+  flex-grow: 1;
+}
 
-  /* ---------- Доп Задание ------------ */
-  .all-container {
-    display: flex;
-  }
-  #controls-container {
-    display: flex;
-    gap: 20px;
-    width: fit-content;
-  }
-  .controller-btn {
-  }
-  .task-container {
-  }
-  .box {
-  }
-  .first {
-  }
-  .second {
-  }
-  .third {
-  }
-  .fourth {
-  }
+/* ---------- Доп Задание ------------ */
+.all-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+#controls-container {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+}
+.controller-btn {
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.active {
+  background-color: rgb(255, 157, 157);
+  box-shadow: 0 0 10px #00000072;
+  cursor: default;
+}
+.task-container {
+  display: flex;
+  border: 1px dotted gray;
+  padding: 20px;
+  gap: 20px;
+}
+.box {
+  background-color: rgb(225, 192, 255);
+  padding: 20px;
+  border: 2px dotted gray;
+  border-radius: 10px;
+  flex-grow: 1;
+}

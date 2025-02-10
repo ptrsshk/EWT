@@ -1,6 +1,6 @@
 html {
-    font-family: sans-serif;
-  }
+  font-family: sans-serif;
+}
 
 body {
   margin: 0;
@@ -10,6 +10,7 @@ main {
   align-items: center;
   padding: 50px;
   justify-content: space-between;
+  flex-direction: column;
 }
 header {
   background: rgb(52, 206, 142);
@@ -44,11 +45,21 @@ button {
   background-color: green;
 }
 @keyframes vibrate {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* ------------ Задание 3 ------------- */
@@ -58,6 +69,7 @@ button {
   font-size: 20px;
   color: black;
   transition: 0.4s ease-in-out;
+  margin: 20px;
 }
 .link:hover {
   color: green;
@@ -88,75 +100,178 @@ button {
   height: 50px;
   border-radius: 50%;
   background-color: rgb(250, 89, 207);
-  animation: shrink 4s;
+  animation: shrink 4s infinite;
 }
 #ball-container {
   width: 50px;
   height: 50px;
-  animation: bounce 4s;
+  animation: bounce 4s infinite;
 }
 
 @keyframes shrink {
   0% {
     transform: scaleY(1);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   15% {
-      transform: scaleY(1);
-      animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   20% {
     transform: scaleY(0.2);
-    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   25% {
     transform: scaleY(1);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   55% {
     transform: scaleY(1);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   60% {
     transform: scaleY(0.4);
-    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   65% {
     transform: scaleY(1);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   95% {
     transform: scaleY(1);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   100% {
     transform: scaleY(0.6);
-    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
 }
 @keyframes bounce {
   0% {
-      transform: translateY(160px);
-      animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    transform: translateY(160px);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   20% {
     transform: translateY(0);
-    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   40% {
     transform: translateY(80px);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   60% {
     transform: translateY(0);
-    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   80% {
     transform: translateY(40px);
-    animation-timing-function: cubic-bezier(.7,0,.9,.6);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   100% {
     transform: translateY(0);
-    animation-timing-function: cubic-bezier(.6,.9,0,.7);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
+}
+
+/* ------------ Задание 4 ------------- */
+
+.newton-container {
+  position: relative;
+}
+.pendulum {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  transition: transform 0.5s ease;
+}
+
+#ball2 {
+  left: 30%;
+}
+#ball3 {
+  left: 50%;
+}
+#ball4 {
+  left: 70%;
+}
+#ball5 {
+  left: 90%;
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes center {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#ball1 {
+  left: 10%;
+  animation: left 1s infinite ease-out;
+}
+.ball:nth-child(2),
+.ball:nth-child(3),
+.ball:nth-child(4) {
+  animation: center 1s infinite ease-out;
+}
+.ball:nth-child(5) {
+  animation: right 1s infinite ease-out;
 }
