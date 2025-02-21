@@ -11,6 +11,7 @@ main {
   padding: 50px;
   justify-content: space-between;
   flex-direction: column;
+  gap: 100px;
 }
 header {
   background: rgb(52, 206, 142);
@@ -92,14 +93,17 @@ button {
 .border {
   height: 200px;
   border-radius: 25px;
-  background-color: black;
+  background-color: #797979;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 #ball {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgb(250, 89, 207);
+  background-color: rgb(255, 119, 0);
   animation: shrink 4s infinite;
 }
 #ball-container {
@@ -118,7 +122,7 @@ button {
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   20% {
-    transform: scaleY(0.2);
+    transform: scaleY(0.7);
     animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   25% {
@@ -130,25 +134,29 @@ button {
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   60% {
-    transform: scaleY(0.4);
+    transform: scaleY(0.8);
     animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   65% {
     transform: scaleY(1);
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
-  95% {
+  90% {
     transform: scaleY(1);
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
-  100% {
-    transform: scaleY(0.6);
+  95% {
+    transform: scaleY(0.9);
     animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
+  }
+  100% {
+    transform: scaleY(1);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
 }
 @keyframes bounce {
   0% {
-    transform: translateY(160px);
+    transform: translateY(-160px);
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   20% {
@@ -156,7 +164,7 @@ button {
     animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   40% {
-    transform: translateY(80px);
+    transform: translateY(-80px);
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
   }
   60% {
@@ -164,8 +172,12 @@ button {
     animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   80% {
-    transform: translateY(40px);
+    transform: translateY(-40px);
     animation-timing-function: cubic-bezier(0.7, 0, 0.9, 0.6);
+  }
+  95% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.6, 0.9, 0, 0.7);
   }
   100% {
     transform: translateY(0);
@@ -178,36 +190,32 @@ button {
 .newton-container {
   position: relative;
 }
-.pendulum {
+.balls {
   position: relative;
   width: 200px;
   height: 100px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .ball {
   width: 40px;
   height: 40px;
-  background-color: #3498db;
+  background-color: #ce2566;
   border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  transition: transform 0.5s ease;
 }
-
-#ball2 {
-  left: 30%;
+.ball-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#ball3 {
-  left: 50%;
-}
-#ball4 {
-  left: 70%;
-}
-#ball5 {
-  left: 90%;
+.ball-container::before {
+  content: '';
+  width: 3px;
+  background-color: black;
+  height: 80px;
+  display: block;
 }
 
 @keyframes left {
@@ -215,7 +223,8 @@ button {
     transform: translateX(0);
   }
   25% {
-    transform: translateX(-50px);
+    transform-origin: 50% 0;
+    transform: rotate(45deg);
   }
   50% {
     transform: translateX(0);
@@ -239,39 +248,17 @@ button {
     transform: translateX(0);
   }
   75% {
-    transform: translateX(50px);
+    transform-origin: 50% 0;
+    transform: rotate(-45deg);
   }
   100% {
     transform: translateX(0);
   }
 }
 
-@keyframes center {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  75% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-#ball1 {
-  left: 10%;
+.ball-container:first-child {
   animation: left 1s infinite ease-out;
 }
-.ball:nth-child(2),
-.ball:nth-child(3),
-.ball:nth-child(4) {
-  animation: center 1s infinite ease-out;
-}
-.ball:nth-child(5) {
+.ball-container:nth-child(5) {
   animation: right 1s infinite ease-out;
 }
