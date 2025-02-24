@@ -1,0 +1,109 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  padding: 15px 0;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: rgba(16, 233, 215, 0.178);
+}
+
+.grid {
+  display: grid;
+
+  grid-template-areas:
+    'A  B  C  C'
+    'A  D  C  C'
+    'A  E  F  G'
+    'H  I  I  J';
+}
+
+article:nth-child(1) {
+  grid-area: A;
+}
+article:nth-child(2) {
+  grid-area: B;
+}
+article:nth-child(3) {
+  grid-area: C;
+}
+article:nth-child(4) {
+  grid-area: D;
+}
+article:nth-child(5) {
+  grid-area: E;
+}
+article:nth-child(6) {
+  grid-area: F;
+}
+article:nth-child(7) {
+  grid-area: G;
+}
+article:nth-child(8) {
+  grid-area: H;
+}
+article:nth-child(9) {
+  grid-area: I;
+}
+article:nth-child(10) {
+  grid-area: J;
+}
+
+/* ---------- Доп Задание ------------ */
+.all-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+#controls-container {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+}
+.controller-btn {
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.active {
+  background-color: rgb(255, 157, 157);
+  box-shadow: 0 0 10px #00000072;
+  cursor: default;
+}
+.task-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  border: 1px dotted gray;
+  padding: 20px;
+  gap: 20px;
+}
+.box {
+  background-color: rgb(225, 192, 255);
+  padding: 20px;
+  border: 2px dotted gray;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.box:nth-child(3) {
+  grid-column: span 2;
+}
