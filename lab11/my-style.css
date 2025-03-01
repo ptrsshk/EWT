@@ -1,0 +1,95 @@
+* {
+  font-family: Georgia;
+  text-align: center;
+}
+body {
+  margin: 0;
+}
+body div.wrapper {
+  max-width: none;
+  padding: 50px 120px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #e6c97e;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #e6c97e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main article.article img {
+  display: inline;
+  height: 8rem;
+}
+
+.first img,
+.third img,
+.fifth img {
+  float: inline-start;
+}
+.second img,
+.fourth img {
+  float: inline-end;
+}
+
+.word {
+  background-color: red;
+  padding: 10px;
+  width: fit-content;
+  position: sticky;
+  top: 60px;
+  color: white;
+}
+.word.second {
+  margin-left: 74px;
+  background-color: pink;
+}
+.word.third {
+  margin-left: 108px;
+  background-color: yellow;
+  color: black;
+}
+.word.fourth {
+  margin-left: 170px;
+  background-color: blueviolet;
+}
+.word.fifth {
+  margin-left: 258px;
+  background-color: rebeccapurple;
+}
+
+main article.article p {
+  font-style: normal;
+}
+
+aside blockquote.blockquote {
+  font-weight: bold;
+  font-style: italic;
+}
+
+img + p::first-letter {
+  font-size: 20px;
+  color: blueviolet;
+  font-weight: 600;
+}
+
+footer a {
+  text-decoration: underline !important;
+  color: -webkit-link !important;
+  cursor: default !important;
+}
