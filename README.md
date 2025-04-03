@@ -13,3 +13,4 @@
 - [ЛР 8](https://ptrsshk.github.io/EWT/lab8/)
 - [ЛР 9](https://ptrsshk.github.io/EWT/lab9/)
 - [ЛР 10](https://ptrsshk.github.io/EWT/lab10/)
+- [ЛР 11](https://ptrsshk.github.io/EWT/lab11/)
