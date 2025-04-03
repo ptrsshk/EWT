@@ -1,0 +1,115 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  padding: 15px 0;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: rgba(16, 233, 215, 0.178);
+}
+
+.adaptive {
+  display: grid;
+  grid-template-areas:
+    'A A B B'
+    'C C C C'
+    'D D E E';
+}
+article:nth-child(1) {
+  grid-area: A;
+}
+article:nth-child(2) {
+  grid-area: B;
+}
+article:nth-child(3) {
+  grid-area: C;
+}
+article:nth-child(4) {
+  grid-area: D;
+}
+article:nth-child(5) {
+  grid-area: E;
+}
+
+@media (max-width: 1399px) {
+  .adaptive {
+    grid-template-areas:
+      'A A A A'
+      'B B B B'
+      'C C C C'
+      'D D E E'
+      'F F G G'
+      'H H I I';
+  }
+  article:nth-child(6) {
+    grid-area: F;
+  }
+  article:nth-child(7) {
+    grid-area: G;
+  }
+  article:nth-child(8) {
+    grid-area: H;
+  }
+  article:nth-child(9) {
+    grid-area: I;
+  }
+}
+@media (max-width: 699px) {
+  .adaptive {
+    grid-template-areas:
+      'A'
+      'B'
+      'C'
+      'D'
+      'E'
+      'F'
+      'G'
+      'H'
+      'I';
+  }
+}
+
+/* ------------ Доп. задание ----------- */
+
+.dop {
+  min-height: calc(100vh - 130px);
+}
+.monkey-container {
+  display: flex;
+  justify-content: space-around;
+}
+.monkey {
+  position: relative;
+  @media (max-width: 800px) {
+    &:nth-child(2) {
+      top: calc((800px - 100vw)/4);
+    }
+    &:nth-child(3) {
+      top: calc((800px - 100vw)/2);
+    }
+    &:nth-child(4) {
+      top: calc(800px - 100vw);
+    }
+  }
+}
+img {
+  position: absolute;
+  transform: translateX(-50%);
+  width: 200px;
+}
